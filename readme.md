@@ -2,7 +2,7 @@ FA_gimmeBipods
 ==
 
 **Description**<br/>
-Server-side addon to give bipods to players in missions with an gear assignment script, made before Marksman DLC. Bipods are given to player if their in-game class is either AR/MG/Sniper/Marksman or one of the corresponding F3 assignGear types.
+Server-side addon to give bipods to players in older missions, if they use a gear assignment script which removes bipods. Bipods are given to player if their in-game class is either AR/MG/Sniper/Marksman or one of the corresponding F3 assignGear types.
 
 **Usage**<br/>
 Download .zip and run the pbo as addon on your server. Requires CBA.
