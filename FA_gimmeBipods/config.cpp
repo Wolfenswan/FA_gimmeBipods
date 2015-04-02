@@ -15,5 +15,5 @@ class CfgPatches
 
 class Extended_PostInit_EventHandlers
 { 
-    FA_F3BipodsInit = "[] execVM 'FA_gimmeBipods\init.sqf';";
+    FA_gimmeBipodsInit = "[] execVM 'FA_gimmeBipods\init.sqf';";
 };
