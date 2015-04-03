@@ -16,9 +16,10 @@ if !(isServer) exitWith {};
 		if ((_x weaponAccessories (primaryWeapon _x) select 3) == "") then {
 
 			// Check for F3 gear types first
-			_getsbipod = (toLower(_x getVariable ["f_var_assignGear","false"]) in _givebipodzF3);
+			_getsbipod = (toLower(_x getVariable ["f_var_assignGear","false"])) in _givebipodzF3;
 
 			if !(_getsbipod) then {
+
 				// Loop through classes second
 				_unit = _x;
 				{
@@ -28,14 +29,14 @@ if !(isServer) exitWith {};
 
 			if (_getsbipod) then {
 					_bipod = switch (side _x) do {
-						case west:{"bipod_01_F_mtp"};
+						case west:{"bipod_01_F_snd"};
 						case east:{"bipod_02_F_hex"};
 						case resistance:{"bipod_03_F_oli"};
 						default {"bipod_01_F_blk"};
 					};
 
 					// Add the bipod to the unit where the unit is local
-					[[_x,_bipod],"addPrimaryWeaponItem",_x,false,true]; call Bis_fnc_MP;
+					[[_x addPrimaryWeaponItem _bipod],"BIS_fnc_Spawn",_x,false,true]; call Bis_fnc_MP;
 			};
 		};
 	} forEach playableUnits;
