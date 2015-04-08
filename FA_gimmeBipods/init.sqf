@@ -35,9 +35,11 @@ if !(isServer) exitWith {};
 						default {"bipod_01_F_blk"};
 					};
 
-					// Add the bipod to the unit where the unit is local
-					[[_x addPrimaryWeaponItem _bipod],"BIS_fnc_Spawn",_x,false,true]; call Bis_fnc_MP;
+				// Add the bipod to the unit where the unit is local
+				[[[_x,_bipod],{((_this select 0) addPrimaryWeaponItem (_this select 1))}],"BIS_fnc_Spawn",_x,false,true] call Bis_fnc_MP;
 			};
 		};
 	} forEach playableUnits;
 };
+
+
